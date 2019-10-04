@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin8"
+    android:layout_marginBottom="@dimen/margin8"
+    android:layout_marginStart="@dimen/margin16"
+    android:layout_marginEnd="@dimen/margin16"
+    android:clickable="true"
+    app:cardElevation="2dp"
+    android:foreground="?android:selectableItemBackground"
+    app:cardCornerRadius="@dimen/margin8"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="0dp"
+            android:layout_height="190dp"
+            android:scaleType="fitXY"
+            android:layout_weight="0.4"
+            android:contentDescription="@string/todo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/margin8"
+            android:paddingEnd="@dimen/margin8"
+            android:background="@color/BackgroundCard"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_title"
+                tools:text="@tools:sample/lorem"
+                android:textSize="@dimen/textTitle"
+                android:textStyle="bold"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="@dimen/margin8"
+                android:textColor="@color/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/item_genres"
+                tools:text="@tools:sample/lorem"
+                android:textStyle="italic"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="@dimen/margin8"
+                android:textColor="@color/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/item_overview"
+                android:lineSpacingExtra="6dp"
+                tools:text="@tools:sample/lorem"
+                android:lines="3"
+                android:textColor="@color/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

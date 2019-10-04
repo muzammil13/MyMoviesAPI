@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@color/colorPrimary"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextColor="@color/unselected">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabMovies"
+            style="@style/tab_item"
+            android:icon="@drawable/movieactiv"
+            android:text="@string/movies" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabTV"
+            style="@style/tab_item"
+            android:icon="@drawable/tvdisable"
+            android:text="@string/tv" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_below="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

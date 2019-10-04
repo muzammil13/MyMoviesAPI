@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bot_movies"
+        android:icon="@drawable/movieactiv"
+        android:title="@string/movies"
+        />
+    <item
+        android:id="@+id/bot_film"
+        android:icon="@drawable/tvdisable"
+        android:title="@string/tv"
+        />
+    <item
+        android:id="@+id/bot_language"
+        android:icon="@drawable/favorite"
+        android:title="@string/favorite"
+        />
+</menu>

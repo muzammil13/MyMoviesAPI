@@ -1,0 +1,76 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "aab4fde866ed8aea43bef35d70395fe1",
+    "entities": [
+      {
+        "tableName": "movie_favorite_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`favorite_id` INTEGER NOT NULL, `title_Favorite` TEXT, `original_title_Favorite` TEXT, `release_date_Favorite` TEXT, `overview_Favorite` TEXT, `categories` TEXT, `backdropPath` TEXT, `posterPath` TEXT, PRIMARY KEY(`favorite_id`))",
+        "fields": [
+          {
+            "fieldPath": "id_Favorite",
+            "columnName": "favorite_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title_Favorite",
+            "columnName": "title_Favorite",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "original_title_Favorite",
+            "columnName": "original_title_Favorite",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "release_date_Favorite",
+            "columnName": "release_date_Favorite",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "overview_Favorite",
+            "columnName": "overview_Favorite",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "categories",
+            "columnName": "categories",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "backdropPath",
+            "columnName": "backdropPath",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "posterPath",
+            "columnName": "posterPath",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "favorite_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'aab4fde866ed8aea43bef35d70395fe1')"
+    ]
+  }
+}
